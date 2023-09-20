@@ -1,0 +1,31 @@
+h1{font-family: Arial, Helvetica, sans-serif;
+color: orange;
+text-align: center;}
+section{transform: translate(450px);}
+img{transform: translate(600px);
+min-width:4px;}
+caption{text-align: left;}
+div{
+font-size: 25px;
+background-color:grey;
+display:inline;
+padding: 10px;
+margin:20px;
+translate:(900);}
+button{background-color:red;}
+body{justify-content: center;}
+table{border-collapse:collapse;
+margin: auto;}
+td,th{border: 2px solid black;
+padding: 30px;}
+th{background-color: darkgreen;
+color:white;}
+caption{color:maroon;}
+input,label{color:chocolate;}
+/*responsive*/
+@media only screen and(max-widht:500px){
+    tbody,th,td,tr
+    display:block
+}
+    
+}
