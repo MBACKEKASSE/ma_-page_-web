@@ -1,86 +1,77 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>gestion de buget</title>
-</head>
-<body>
-<h1>gestion<br>de budget</h1>
- <img src="logo.jpg"alt="logo">
-<section><br>
-<div>Dépenses</div>
-<div>Revenus</div>
-<div>Solde</div>
-</section>
-<table><br>
-<caption style="caption-side: top"> listes des dépenses</caption>
-  <tr><br>
-<th>dépenses</th> 
-<th>sommes</th>
-<th>operations</th>
-  </tr>
-  <tr>
-<td>nourritures</td>
-<td>23.OOO fcfa</td>
-<td class><button>supprimer</button></td>
-  </tr>
-  <tr>
-   <td>loyer</td>
-  <td>25.000 fcfa</td>
-  <td class><button>supprimer</button></td>
-  </tr>
-  <tr>
-  <td>transports</td>
-  <td>15.000 fcfa</td>
-  <td class><button>supprimer</button></td>
-  </tr>
-  <tr>
-  <td>shopping</td>
-  <td>20.000 fcfa</td>
-   <td class><button>supprimer</button></td>
-  </tr>
-  <tr>
-<td><input type="button" value="+"> <label>Ajouter une dépense</label></td>
-<td></td>
-<td></td>
-  </tr>
-</table>
-<table><br>
-<caption style="caption-side: top">listes des revenus</caption>
-<tr><br>
-<th>revenus</th>
-<th>sommes</th>
-<th>actions</th>
-</tr>
-<tr>
-<td>salaire</td>
-<td>200.000 fcfa</td>
-<td class><button>supprimer</button></td>
-</tr>
-<tr>
-  <td>commerce</td>
- <td>100.00 fcfa</td>
- <td class=><button>supprimer</button></td> 
-</tr>
-<tr>
-<td>immobilier</td>
-<td>160.000 fcfa</td>
-<td class><button>supprimer</button></td>
-</tr>
-<tr>
-<td>location de voiture</td>
-<td>300.000 fcfa</td>
-<td class><button>supprimer</button></td>
-</tr>
-<tr>
-  <td><input type="button" value="+"> <label>Ajouter un revenu</label></td>
-  <td></td>
-  <td></td>
-</tr>
-</table>
-</body>
-  </html>
-  
-  
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application de Budget</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="total-amount-container">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              veuillez entrer une valeur positive
+            </p>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="veuillez entrer le budget"
+            />
+            <button class="submit" id="total-amount-button">vérifie</button>
+          </div>
+
+          <!-- Dépenses-->
+          <div class="user-amount-container">
+            <h3>Dépenses</h3>
+            <p class="hide error" id="product-title-error">
+              le champ ne peut etre vide.
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Entrer le nom du produit"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Entrer le prix du produit"
+            />
+            <button class="submit" id="check-amount">vérifie</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>Budget total</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Depenses</p>
+            <span id="depense-value">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3> List</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
